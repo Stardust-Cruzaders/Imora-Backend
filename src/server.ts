@@ -15,6 +15,7 @@ app.get('/', async (req, res) => {
   return res.send().status(200);
 });
 app.use(routes);
+console.log(process.env.DATABASE_URL);
 app.use(
   (err: Error, request: Request, response: Response, _next: NextFunction) => {
     if (err instanceof AppError) {
