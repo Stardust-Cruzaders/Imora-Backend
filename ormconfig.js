@@ -2,7 +2,7 @@ module.exports = {
   "type": "postgres",
   "url": process.env.DATABASE_URL,
 	"host": "localhost",
-  "port": 5432,
+  "port": 5434,
   "username": "postgres",
   "password": "docker",
   "database": "imora",
