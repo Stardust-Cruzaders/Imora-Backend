@@ -3,6 +3,6 @@
 node_modules/
 build/
 .env
-Imora-de02efe2d599.json
+google-credentials.json
 dist/
 ormconfig.json

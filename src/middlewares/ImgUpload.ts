@@ -12,7 +12,9 @@ interface Image {
   buffer: any;
   size: number;
 }
-const storage = new Storage({ keyFilename: 'Imora-de02efe2d599.json' });
+const storage = new Storage({
+  keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
+});
 
 const bucketName = 'imora_residence_pictures';
 
