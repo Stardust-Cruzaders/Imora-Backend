@@ -139,7 +139,6 @@ usersRouter.post(
     const storage = new Storage({
       keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
     });
-    console.log(file_name);
     const bucketName = 'imora_user_pictures';
 
     await storage.bucket(bucketName).file(file_name).delete();
