@@ -42,7 +42,13 @@ residencesRouter.post(
     return response.json({ files });
   },
 );
-
+residencesRouter.post(
+  '/:residence_id/upload/delete',
+  async (request, response) => {
+    const { residence_id } = request.params;
+    const { imagesToDelete } = request.body;
+  },
+);
 residencesRouter.get('/', async (request, response) => {
   const {
     price,
@@ -288,12 +294,11 @@ residencesRouter.patch('/:residence_id/interess', async (request, response) => {
 residencesRouter.patch(
   '/:residence_id/update_images',
   async (request, response) => {
-    const { owner_id, images } = request.body;
+    const { images } = request.body;
     const { residence_id } = request.params;
 
     const updateResidenceImages = new UpdateResidenceImages();
     const residence = await updateResidenceImages.execute({
-      owner_id,
       images,
       residence_id,
     });
