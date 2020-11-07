@@ -7,7 +7,6 @@ interface Request {
   residence_id: string;
   residence_name: string;
   description: string;
-  images: string;
   available: boolean;
   zipcode: string;
   state: string;
@@ -40,7 +39,6 @@ class UpdateResidenceService {
     residence_id,
     residence_name,
     description,
-    images,
     available,
     zipcode,
     state,
@@ -80,7 +78,7 @@ class UpdateResidenceService {
     const updatedResidence = residenceRepository.create({
       residence_name,
       description,
-      images,
+      images: residence.images,
       available,
       zipcode,
       state,

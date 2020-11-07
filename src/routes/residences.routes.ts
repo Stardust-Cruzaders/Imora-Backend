@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Router } from 'express';
 import { getRepository } from 'typeorm';
 
@@ -33,6 +34,7 @@ residencesRouter.post(
   uploadToGcs,
   async (request, response) => {
     const files: Array<string> = [];
+    // eslint-disable-next-line array-callback-return
     request.files.map((file: any) => {
       files.push(file.cloudStoragePublicUrl);
     });
@@ -196,7 +198,6 @@ residencesRouter.put('/:residence_id', async (request, response) => {
   const {
     residence_name,
     description,
-    images,
     available,
     zipcode,
     state,
@@ -230,7 +231,6 @@ residencesRouter.put('/:residence_id', async (request, response) => {
     residence_id,
     residence_name,
     description,
-    images,
     available,
     zipcode,
     state,
