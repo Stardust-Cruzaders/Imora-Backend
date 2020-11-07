@@ -16,6 +16,7 @@ import ListInteressedUsers from '../services/ListInteressedUsers';
 import uploadToGcs from '../middlewares/ImgUpload';
 
 import ensureAuthenticated from '../middlewares/ensureAuthenticated';
+import UpdateResidenceImages from '../services/UpdateResidenceImages';
 
 const residencesRouter = Router();
 
@@ -284,6 +285,21 @@ residencesRouter.patch('/:residence_id/interess', async (request, response) => {
   });
   return response.json(residence);
 });
+residencesRouter.patch(
+  '/:residence_id/update_images',
+  async (request, response) => {
+    const { owner_id, images } = request.body;
+    const { residence_id } = request.params;
+
+    const updateResidenceImages = new UpdateResidenceImages();
+    const residence = await updateResidenceImages.execute({
+      owner_id,
+      images,
+      residence_id,
+    });
+    return response.json(residence);
+  },
+);
 residencesRouter.delete('/:residence_id', async (request, response) => {
   const { residence_id } = request.params;
 
