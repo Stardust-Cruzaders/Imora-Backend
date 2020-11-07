@@ -136,7 +136,9 @@ usersRouter.post(
   ensureAuthenticated,
   async (request, response) => {
     const { file_name } = request.body;
-    const storage = new Storage({ keyFilename: 'Imora-de02efe2d599.json' });
+    const storage = new Storage({
+      keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
+    });
     console.log(file_name);
     const bucketName = 'imora_user_pictures';
 

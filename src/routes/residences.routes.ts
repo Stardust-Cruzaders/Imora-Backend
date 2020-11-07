@@ -17,6 +17,7 @@ import uploadToGcs from '../middlewares/ImgUpload';
 
 import ensureAuthenticated from '../middlewares/ensureAuthenticated';
 import UpdateResidenceImages from '../services/UpdateResidenceImages';
+import DeleteResidenceImages from '../services/DeleteResidenceImages';
 
 const residencesRouter = Router();
 
@@ -47,6 +48,14 @@ residencesRouter.post(
   async (request, response) => {
     const { residence_id } = request.params;
     const { imagesToDelete } = request.body;
+
+    const deleteResidenceImages = new DeleteResidenceImages();
+
+    await deleteResidenceImages.execute({
+      residence_id,
+      imagesToDelete,
+    });
+    return response.send();
   },
 );
 residencesRouter.get('/', async (request, response) => {
