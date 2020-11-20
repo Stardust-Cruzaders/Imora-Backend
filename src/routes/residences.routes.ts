@@ -59,39 +59,13 @@ residencesRouter.post(
   },
 );
 residencesRouter.get('/', async (request, response) => {
-  const {
-    price,
-    residence_place,
-    residence_type,
-    allow_pets,
-    allow_smokers,
-    wifi,
-    kitchen,
-    tv,
-    ac,
-    notebook_work,
-    pool,
-    parking,
-    grill,
-    city,
-  } = request.query;
+  const { price, residence_place, city } = request.query;
 
   const listResidenceService = new ListResidenceService();
 
   const residences = await listResidenceService.execute({
     price,
     residence_place,
-    residence_type,
-    allow_pets,
-    allow_smokers,
-    wifi,
-    kitchen,
-    tv,
-    ac,
-    notebook_work,
-    pool,
-    parking,
-    grill,
     city,
   });
   return response.json(residences);

@@ -29,6 +29,7 @@ class DeleteResidenceImages {
       keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
     });
     const bucketName = 'imora_residence_pictures';
+
     imagesToDelete.map(async (image: string) => {
       await storage
         .bucket(bucketName)
