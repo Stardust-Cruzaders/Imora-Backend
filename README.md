@@ -19,11 +19,11 @@ Esse é o backend do aplicativo android imora, desenvolvido com NodeJS,Typescrip
 
 ## Sumário 🛰
 
-- [Sobre 📖](#Sobre)
-- [Instalação 👷‍♂️](#Instalacao)
-- [Funcionalidades 🛠✨](#Funcionalidades)
-- [Contato 💼](#Contato)
-- [Licença 👨‍⚖️](#Licenca)
+- [Sobre 📖](#sobre-)
+- [Instalação 👷‍♂️](#instalação-%EF%B8%8F)
+- [Funcionalidades 🛠✨](#funcionalidades-)
+- [Contato 💼](#contato-)
+- [Licença 👨‍⚖️](#licença-%EF%B8%8F)
 
 ## Sobre 📖
 
@@ -77,13 +77,13 @@ Não esqueça de criar um banco de dados e atualizar as informações do arquivo
 
 ---
 
-## Contact 💼
+## Contato 💼
 
 | <a href="https://github.com/stelianok" target="_blank">**Kauã Steliano**</a> 
 | :---: 
 | [![Name](https://avatars2.githubusercontent.com/u/39469125?s=460&u=97e778a861a7a42bee1b16f6be1c80467c50c1d1&v=4)](https://github.com/stelianok)    
 
-### collaborator 1
+### Kauã Steliano
 
 Twitter:
 [@Steli4nok](https://twitter.com/Steli4nok)
@@ -97,7 +97,7 @@ Github:
 
 ---
 
-## License 👨‍⚖️
+## Licença 👨‍⚖️
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
