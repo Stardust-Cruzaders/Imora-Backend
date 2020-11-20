@@ -7,6 +7,12 @@ Esse é o backend do aplicativo android imora, desenvolvido com NodeJS,Typescrip
 <img src="https://i.imgur.com/NCtFqtl.png" align="center" />
 </p>
 
+<p align="center"> 
+  
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Imora-rest-api&uri=https%3A%2F%2Fgithub.com%2FStardust-Cruzaders%2FImora-Backend%2Fblob%2Fmain%2FimoraRoutes.json)
+
+</p>
+
 ## Tecnologias :rocket: 
 ### Esse projeto foi desenvolvido com as seguintes tecnologias:
 
