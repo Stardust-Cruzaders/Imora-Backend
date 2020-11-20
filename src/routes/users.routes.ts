@@ -18,6 +18,7 @@ const Multer = multer({
     fieldSize: 5 * 1024 * 1024,
   },
 });
+
 usersRouter.post(
   '/upload',
   Multer.single('image'),
@@ -61,7 +62,7 @@ usersRouter.post('/', async (request, response) => {
   return response.json(user);
 });
 
-usersRouter.post('/find', async (request, response) => {
+usersRouter.post('/find', ensureAuthenticated, async (request, response) => {
   const { email } = request.body;
 
   const findUser = new FindUserService();
