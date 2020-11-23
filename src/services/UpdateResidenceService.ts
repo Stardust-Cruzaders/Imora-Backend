@@ -7,7 +7,6 @@ interface Request {
   residence_id: string;
   residence_name: string;
   description: string;
-  available: boolean;
   zipcode: string;
   state: string;
   city: string;
