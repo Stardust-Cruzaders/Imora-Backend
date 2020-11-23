@@ -39,7 +39,6 @@ class UpdateResidenceService {
     residence_id,
     residence_name,
     description,
-    available,
     zipcode,
     state,
     city,
@@ -79,7 +78,7 @@ class UpdateResidenceService {
       residence_name,
       description,
       images: residence.images,
-      available,
+      available: residence.available,
       zipcode,
       state,
       city,
@@ -104,6 +103,8 @@ class UpdateResidenceService {
       num_bathrooms,
       current_residents,
       max_residents,
+      owner_id: residence.owner_id,
+      interessed_users: residence.interessed_users,
     });
     await residenceRepository.update(residence.id, updatedResidence);
     return updatedResidence;

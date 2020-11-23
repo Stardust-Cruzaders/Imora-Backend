@@ -188,7 +188,6 @@ residencesRouter.put('/:residence_id', async (request, response) => {
   const {
     residence_name,
     description,
-    available,
     zipcode,
     state,
     city,
@@ -221,7 +220,6 @@ residencesRouter.put('/:residence_id', async (request, response) => {
     residence_id,
     residence_name,
     description,
-    available,
     zipcode,
     state,
     city,
