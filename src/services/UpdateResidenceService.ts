@@ -72,40 +72,35 @@ class UpdateResidenceService {
     if (!residence) {
       throw new AppError("Residence doesn't exist");
     }
+    residence.residence_name = residence_name;
+    residence.description = description;
+    residence.zipcode = zipcode;
+    residence.state = state;
+    residence.city = city;
+    residence.neighborhood = neighborhood;
+    residence.street = street;
+    residence.numberr = numberr;
+    residence.complement = complement;
+    residence.residence_type = residence_type;
+    residence.residence_place = residence_place;
+    residence.price = price;
+    residence.allow_smokers = allow_smokers;
+    residence.allow_pets = allow_pets;
+    residence.wifi = wifi;
+    residence.kitchen = kitchen;
+    residence.tv = tv;
+    residence.ac = ac;
+    residence.notebook_work = notebook_work;
+    residence.grill = grill;
+    residence.pool = pool;
+    residence.parking = parking;
+    residence.num_rooms = num_rooms;
+    residence.num_bathrooms = num_bathrooms;
+    residence.current_residents = current_residents;
+    residence.max_residents = max_residents;
 
-    const updatedResidence = residenceRepository.create({
-      residence_name,
-      description,
-      images: residence.images,
-      available: residence.available,
-      zipcode,
-      state,
-      city,
-      neighborhood,
-      street,
-      numberr,
-      complement,
-      residence_type,
-      residence_place,
-      price,
-      allow_smokers,
-      allow_pets,
-      wifi,
-      kitchen,
-      tv,
-      ac,
-      notebook_work,
-      grill,
-      pool,
-      parking,
-      num_rooms,
-      num_bathrooms,
-      current_residents,
-      max_residents,
-      owner_id: residence.owner_id,
-      interessed_users: residence.interessed_users,
-    });
-    await residenceRepository.update(residence.id, updatedResidence);
+    const updatedResidence = residenceRepository.save(residence);
+
     return updatedResidence;
   }
 }
