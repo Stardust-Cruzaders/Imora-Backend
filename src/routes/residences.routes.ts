@@ -62,9 +62,9 @@ residencesRouter.get('/', async (request, response) => {
   const { price, residence_place, city } = request.query;
 
   const listResidenceService = new ListResidenceService();
-
+  const parsedPrice: number = parseFloat(price);
   const residences = await listResidenceService.execute({
-    price,
+    price: parsedPrice,
     residence_place,
     city,
   });
