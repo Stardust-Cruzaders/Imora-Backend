@@ -24,12 +24,6 @@ class ListResidencesService {
     );
 
     function filterByPrice(residence: Residence): boolean {
-      console.log(
-        residence.residence_name,
-        Number(residence.price),
-        price,
-        Number(residence.price) <= price,
-      );
       return Number(residence.price) <= price;
     }
     if (price) {
